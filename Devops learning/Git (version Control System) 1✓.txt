@@ -1,0 +1,62 @@
+Git (version Control System)
+
+Git is a distributed version control system that tracks code changes and enables collaboration across development teams. In DevOps, Git is the foundation for managing source code, automating deployments, and maintaining infrastructure-as-code
+
+Git commands
+
+git--version
+
+git init  (Initialize the empty git repo)
+
+git remote add origin link of the remote directory from git ssh link  (link the remote repo to local environment / )
+
+git pull origin master (download the repo from remote server)
+
+git status 
+
+git add file_name.txt (add file to the staging area before commit)
+
+git commit -m "any message"  
+
+git add -A  (to add multiple file at once)
+
+git commit -a -m " any message" (commit multiple changes at once)
+
+git push origin master (push the changes to the remote directory)
+
+git log (This will show a list of commits with details such as commit hash, author, date, and commit message.)
+
+git branch branchName (create a new branch)
+
+git checkout branchName (switch to branch "branchName")
+
+git merge branchName (first switch to master branch then write this command to merge the branchname to the master branch)
+
+how to revert the changes
+git log (copy the hash code)
+git revert hashCode (will revert the changes that commit)
+
+git clone url (this command is used to create a copy of an existing repository)
+
+git fetch origin (Use git fetch regularly to stay updated with remote changes without altering your local branch.)
+
+Git log dev (will give the history of dev branch)
+
+
+
+
+Key Differences
+
+Clone: First-time full copy of a repository.
+
+Fetch: Get updates without changing your working files.
+
+Pull: Get updates and merge them into your current branch immediately.
+
+Best Practices
+
+Use clone only when starting fresh.
+
+Use fetch to preview and control merges.
+
+Use pull for quick sync when you’re confident about merging changes.

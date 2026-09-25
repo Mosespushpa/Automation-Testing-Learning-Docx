@@ -1,0 +1,13 @@
+"Thank you for this opportunity. My name is Moses, and I am Programmer Analyst Trainee within our Quality Engineering and Assurance domain for the past year.
+
+Over this time, my primary focus has been on test automation and ensuring software reliability. I have hands-on experience building and maintaining automation frameworks using Java, Selenium, and TestNG. For API testing, I work with Karate DSL and Postman, and I handle version control and collaboration through Git and GitHub.
+
+To bring modern efficiency into my workflow, I’ve also completed certifications in Generative AI and Agentic AI, and I leverage GitHub Copilot for code generation.
+
+On the programming side, Java is my strongest language, but I’m also comfortable with Python. I have a solid grasp of core fundamentals, including HTML, CSS, and navigating Linux environments.
+
+Before moving into test automation, my college projects were heavily focused on Machine Learning. I built predictive models using Python, Random Forest, and XGBoost to analyze environmental data—an experience that gave me a strong analytical mindset for debugging test failures.
+
+Looking at the broader engineering lifecycle, I have a foundational understanding of the DevOps ecosystem, specifically how tools like Docker, Kubernetes, and Ansible work under the hood within deployment pipelines.
+
+Currently, I am learning JavaScript with the goal of mastering the Playwright framework for modern UI automation. I’m excited about this opportunity because it aligns perfectly with my testing background, and I’m eager to contribute to a dynamic, collaborative team."

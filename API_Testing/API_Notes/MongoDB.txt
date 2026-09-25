@@ -1,0 +1,37 @@
+MongoDB
+ 
+Indexes
+ IXSCANS -> index scan -> which are Ordered by the value
+
+db.contacts.explain().find({age:{$gt:60}})
+
+db.contacts.explain("executionStats").find({age:{$gt:60}})
+
+db.contacts.createIndex({"dob.age":-1})
+
+
+
+Geospatial Data
+
+db.places.insertMany([{name:"SRZ",location:{type:"Point",coordinates:[80.221193,12.824874]}},
+			{name:"CKC",location:{type:"Point",coordinates:[80.2232581,12.9121528]}},
+			{name:"TMB",location:{type:"Point",coordinates:[80.119029,12.9451581]}}])
+
+db.places.find({
+	location:{
+	   $near:{
+	     $geometry:{
+		type:"Point", 
+		  coordinates:[80.2126515,12.8295647]
+	        },
+		$maxDistance:500,
+		$minDistance:10
+			    }
+			   }
+			})
+
+var p1 = [ 80.200205,12.846990]
+var p2 = [80.203771,12.821404]
+
+
+db.areas.insertOne({name:"area1",location:{type:"Polygon",coordinates:[p1,p2,p4,p3,p1]}})

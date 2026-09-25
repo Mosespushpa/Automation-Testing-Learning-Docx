@@ -1,0 +1,49 @@
+Docker
+
+✅ 1. What is Docker?
+Answer:
+Docker is an open-source platform that automates the deployment of applications inside lightweight, portable containers. It ensures consistency across environments by packaging code, dependencies, and configurations together.
+
+✅ 2. What is a Docker Container?
+Answer:
+A Docker container is a runnable instance of a Docker image. It includes the application and all its dependencies, running in an isolated environment on the host OS.
+
+✅ 3. What is a Docker Image?
+Answer:
+A Docker image is a read-only template used to create containers. It contains the application code, libraries, and dependencies. Images are built using Dockerfiles.
+
+✅ 4. Difference between Docker Image and Container?
+Answer:
+
+Image: Blueprint (read-only) for creating containers.
+Container: Running instance of an image (mutable).
+
+
+✅ 5. What is a Dockerfile?
+Answer:
+A Dockerfile is a text file with instructions to build a Docker image. It defines the base image, environment variables, commands, and application setup.
+
+✅ 6. What is Docker Compose?
+Answer:
+Docker Compose is a tool to define and run multi-container applications using a YAML file (docker-compose.yml). It simplifies orchestration for local development.
+
+✅ 7. How is Docker different from a Virtual Machine?
+Answer:
+
+Docker: Lightweight, shares host OS kernel, faster startup.
+VM: Heavy, includes full OS, slower boot time.
+
+
+✅ 8. What is Docker Hub?
+Answer:
+Docker Hub is a cloud-based registry for sharing and managing Docker images.
+
+✅ 10. Common Docker Commands
+
+docker build -t image-name . → Build image
+docker run -d -p 8080:80 image-name → Run container
+docker ps → List running containers
+docker exec -it container-id bash → Access container shell
+
+
+“# syntax=docker/dockerfile:1 tells Docker to use the official BuildKit Dockerfile frontend (v1), enabling the latest Dockerfile syntax and advanced build features.”

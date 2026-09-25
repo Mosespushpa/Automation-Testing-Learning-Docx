@@ -1,0 +1,188 @@
+Others
+
+AWS devops
+
+✅ 1. What is AWS DevOps?
+Answer:
+AWS DevOps refers to using AWS services and tools to implement DevOps practices like CI/CD, automation, and infrastructure as code. It helps teams deliver applications faster and more reliably.
+
+✅ 2. What AWS services are commonly used in DevOps?
+Answer:
+
+CodeCommit – Source control (Git repository)
+CodeBuild – Build and test automation
+CodeDeploy – Automated deployments
+CodePipeline – CI/CD orchestration
+CloudFormation – Infrastructure as Code
+Elastic Beanstalk – Application deployment
+CloudWatch – Monitoring and logging
+
+
+✅ 3. What is CI/CD in AWS?
+Answer:
+CI/CD stands for Continuous Integration and Continuous Deployment. In AWS, CodePipeline integrates with CodeCommit, CodeBuild, and CodeDeploy to automate the process of building, testing, and deploying applications.
+
+✅ 4. What is Infrastructure as Code (IaC)?
+Answer:
+IaC means managing infrastructure using code instead of manual processes. In AWS, CloudFormation and Terraform are popular tools for IaC.
+
+✅ 5. How do you monitor applications in AWS?
+Answer:
+Using Amazon CloudWatch for metrics, logs, and alarms. It helps track resource utilization and application performance.
+
+
+
+
+Subversion control System
+
+✅ 1. What is Subversion (SVN)?
+Answer:
+Subversion (SVN) is an open-source version control system that helps track changes to files and directories over time. It allows multiple developers to collaborate by maintaining a central repository.
+
+✅ 2. How does SVN differ from Git?
+Answer:
+
+SVN: Centralized version control system (single repository).
+Git: Distributed version control system (each developer has a full copy of the repo).
+SVN is simpler for small teams; Git offers better branching and offline work.
+
+
+
+Https status Codes
+
+✅ 1. What are HTTP Status Codes?
+Answer:
+HTTP status codes are 3-digit responses sent by a server to indicate the result of a client’s request. They are grouped into categories based on the first digit.
+
+✅ Categories
+
+1xx – Informational (Request received, processing continues)
+2xx – Success (Request processed successfully)
+3xx – Redirection (Further action needed)
+4xx – Client Error (Problem with the request)
+5xx – Server Error (Problem on the server side)
+
+
+✅ Common Codes
+200 OK
+
+Request succeeded.
+Example: Successful GET or POST.
+
+201 Created
+
+Resource created successfully.
+Example: After POST creating a new record.
+
+204 No Content
+
+Request succeeded but no content returned.
+Example: DELETE request.
+
+301 Moved Permanently
+
+Resource moved to a new URL.
+Example: Permanent redirect.
+
+302 Found
+
+Temporary redirect.
+
+400 Bad Request
+
+Invalid request syntax or parameters.
+
+401 Unauthorized
+
+Authentication required or failed.
+
+403 Forbidden
+
+Client authenticated but not allowed to access resource.
+
+404 Not Found
+
+Resource does not exist.
+
+500 Internal Server Error
+
+Generic server-side error.
+
+502 Bad Gateway
+
+Server acting as a gateway received an invalid response.
+
+503 Service Unavailable
+
+Server is down or overloaded.
+
+
+✅ Interview One-Liner
+“HTTP status codes are server responses grouped into 5 categories: 1xx (info), 2xx (success), 3xx (redirect), 4xx (client error), and 5xx (server error). Common ones include 200 OK, 404 Not Found, and 500 Internal Server Error.”
+
+
+
+
+Java oops
+
+✅ 1. What is OOP in Java?
+Answer:
+OOP (Object-Oriented Programming) is a programming paradigm based on objects and classes. It focuses on encapsulation, inheritance, polymorphism, and abstraction to make code reusable and maintainable.
+
+✅ 2. What are the four pillars of OOP?
+Answer:
+
+Encapsulation: Wrapping data and methods together in a class.
+Inheritance: Acquiring properties and behaviors from another class.
+Polymorphism: One interface, multiple implementations (method overloading & overriding).
+Abstraction: Hiding implementation details and exposing only functionality.
+
+
+✅ 3. What is a Class and an Object in Java?
+Answer:
+
+Class: A blueprint for creating objects.
+Object: An instance of a class that has state (fields) and behavior (methods).
+
+
+✅ 4. What is Encapsulation?
+Answer:
+Encapsulation means binding data and methods together and restricting direct access using access modifiers like private, public, protected.
+
+✅ 5. What is Inheritance?
+Answer:
+Inheritance allows one class (child) to acquire properties and methods of another class (parent) using the extends keyword.
+
+✅ 6. What is Polymorphism?
+Answer:
+Polymorphism means same method name behaves differently:
+
+Compile-time: Method Overloading.
+Runtime: Method Overriding.
+
+
+✅ 7. What is Abstraction?
+Answer:
+Abstraction hides implementation details and shows only essential features using abstract classes and interfaces.
+
+✅ 8. Difference between Abstract Class and Interface?
+Answer:
+
+Abstract Class: Can have abstract and concrete methods, supports inheritance.
+Interface: Only abstract methods (Java 8+ allows default/static methods), supports multiple inheritance.
+
+
+✅ 9. What is Method Overloading vs Overriding?
+Answer:
+
+Overloading: Same method name, different parameter list (compile-time).
+Overriding: Same method name and parameters in child class (runtime).
+
+
+✅ 10. What are Access Modifiers in Java?
+Answer:
+
+public: Accessible everywhere.
+protected: Accessible within package and subclasses.
+default: Accessible within package only.
+private: Accessible within the same class.

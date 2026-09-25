@@ -1,0 +1,17 @@
+JSON_Placeholder_API
+
+## By running the below code we can generate "Karate Maven Project Structure"
+
+ mvn archetype:generate `
+>>         "-DarchetypeGroupId=io.karatelabs" `                                                                                                     
+>>         "-DarchetypeArtifactId=karate-archetype" `                                                                                               
+>>         "-DarchetypeVersion=1.5.1" `                                                                                                             
+>>         "-DgroupId=com.mycompany" `
+>>	   "-DartifactId=myproject" 
+
+## 
+-------------Suggestions for better and clean code
+1. remove the print statements  ✅
+2. get new userid for each scenario 
+3. make assert/match in one statment ✅
+

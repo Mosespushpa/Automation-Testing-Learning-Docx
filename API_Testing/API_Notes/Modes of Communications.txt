@@ -1,0 +1,27 @@
+Modes of Communications
+1. Signal
+	Analog signal
+	Digital signal
+2. Modulation
+	Phase-shift keying
+	Frequency-shift keying
+	Amplitude-shift keying
+3. Demodulation:  
+
+	It is the act of returning the modulated signal to its baseband form.
+
+	Modem:
+
+	It is a device used as both a modulator and a demodulator.
+
+	Modems are of three types:
+
+	Voiceband Modem:
+	This type of modem is used for dial-up connections. It converts 1s and 0s from PC to analog signal within 	the 0 to 4 KHz voice range 	(Modulation) and to Is and 0s (Demodulation).
+
+	Cable Modem:
+	A Cable Modem is a type of modem that provides access to a data signal sent over the cable television 	infrastructure. Cable modems are primarily 	used to deliver broadband Internet access, taking advantage of 	unused bandwidth on a cable television network.
+
+	ADSL Modem:
+	
+	

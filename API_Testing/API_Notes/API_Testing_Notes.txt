@@ -1,0 +1,77 @@
+//In  karate-config.js file  
+
+ var config = {
+    appURL: 'https://conduit-api.bondaracademy.com/api/'
+  }
+
+  if (env == 'dev') {
+    config.userEmail = 'moses21@gmail.com'
+    config.userPassword = 'Karate@2026'
+  } else if (env == 'QA') {
+    config.userEmail = 'moses21@cognizant.com'
+       config.userPassword = 'Karate@2026'
+  }
+
+var accessToken = karate.callSingle('classpath:helpers/CreateToken.feature', config).authToken
+  karate.configure('headers',{Authorization: 'Token '+accessToken})
+
+//Embedded and Multi-Line Expressions
+
+And request
+    """
+    {
+    "user": {
+    "email": "#('Test'+userData.email)",
+    "password": "Karate@2026",
+    "username": "userData.userName"
+    }
+    }
+    """
+
+//Assertions
+
+And match response.tags contains 'text'
+And match response.tags !contains 'text'
+And match response.tags contains ['array']
+And match response.tags contains any ['array']
+And match response.tags contains only ['array']
+
+And match response.tags == '#type'
+And match each response.tags == '#type'
+
+And match response.articles == '#[size]'
+And match response.articleCount == value
+And match response.articleCount != Value
+
+//for objects structure
+And match response == {"articles":"#array","articlecount":13}
+
+//to match the String
+And match response.articles[0].createAt contains '2020'
+//checking whether any the object contains the value
+And match response.articles[*].favoritesCount contains 1
+
+
+//Fuzzy Matching
+fuzzy matching nothing but validating the type of the object
+
+    And match each response..following == false		//Value validation
+    And match each response..following == '#boolean'	//Type validation
+
+
+
+// Data Driven
+Scenario Outline:
+	Given
+	When
+	Then
+	
+	Examples:
+	Examples:
+      | email             | password  | username             | errorResponse                                     |
+      | #(randomEmail)    | Karate123 | KarateUser1          | {"errors":{"username":["has already been taken"]}}|
+      | shaquana@test.com | Karate123 | randomUserguyguygyg  | {"errors":{"email":["has already been taken"],"username":["has already been taken"]}} |
+      | #(randomEmail)    |           | KarateUser2          | {"errors":{"password":["can't be blank"]}}        |
+      | shaquana@         | Karate123 | randomUser           | {"errors":{"username":["has already been taken"]}}               |
+
+	

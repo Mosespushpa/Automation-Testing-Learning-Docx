@@ -1,0 +1,13 @@
+Write strings into a plain text file. Please read carefully and fulfill the following requirements:
+
+1. Accept 3 proverbs (any string is fine though) from the user through the console
+
+2. Write them all into proverbs.txt
+
+3. Each proverb should be in a separate line
+
+4. *MUST NOT* contain any empty lines in the text file.
+
+Important Note: Please start working on the template code provided/attached. Template code will provide the base template or format in which the end solution is expected from you. Template code is not an executable code and will help you add code on top of it to ensure you make your submissions in the right format. If the submission is NOT as per the template code format the submissions will not be accepted and the completion status of the assessment will be considered as not completed.
+
+Note: The contents of proverbs.txt file can be viewed only in eclipse after writing. Cannot see the content in the platform.

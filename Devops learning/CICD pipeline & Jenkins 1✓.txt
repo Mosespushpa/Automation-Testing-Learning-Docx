@@ -1,0 +1,70 @@
+CI/CD pipeline & Jenkins
+
+CI/CD stands for Continuous Integration and Continuous Delivery/Deployment. With CI/CD, we automate the integration of code changes from multiple developers into a single codebase. It is a software development practice where the developers commit their work frequently to the central code repository (GitHub or Stash).
+
+Before CI/CD
+In the past, software delivery was slow and full of manual work. Developers used to create separate feature branches and worked on them for weeks or even months
+
+After CI/CD
+With CI/CD, the whole process became faster, automated, and more reliable. Developers now commit their code frequently to a shared main branch, which prevents conflicts and ensures smooth integration.
+
+Continuous Integration:
+Continuous Integration is about how developers integrate code using a shared repository multiple times a day with the help of automation.
+
+Continuous Delivery:
+Continuous Delivery is about automatically releasing software to the test or production environment.
+
+When a developer saves (commits) their code to a version control system like Git, the CI pipeline starts. It takes the new changes, builds the project, and runs tests automatically. After that, the server tells the developer if adding the new code to the existing code worked or failed.
+
+What is CI/CD Pipeline?
+Many people think CI/CD and CI/CD Pipeline are the same, but they are a bit different.
+
+CI/CD (Continuous Integration and Continuous Delivery): This is a way of working where developers can make many code changes and deliver updates quickly.
+CI/CD Pipeline: This is the actual step-by-step process that takes the code and automatically moves it from development to live production.
+
+In simple words, a CI/CD pipeline is a series of automatic steps that help developers build, test, and deliver code safely and quickly.
+
+
+CI/CD Pipeline
+A typical CI/CD pipeline has several connected stages:
+
+Developer commits code changes to source control
+
+CI server detects changes and triggers build
+
+Code is compiled, tested (unit, integration tests)
+
+Test results reported to developer
+
+On success, artifacts are deployed to staging environments
+
+Further testing may be done on staging before release
+
+CD system deploys approved changes to production
+
+
+
+
+Jenkins & Jenkins workflow
+
+Jenkins is an open-source automation server by which you can automate the building, testing, and deployment of the application to different servers like development, testing, and production. Jenkins is primarily used for the continuous integration (CI) and continuous Deployment (CD) pipelines.
+
+
+Jenkins Workflow:
+A Jenkins workflow is a CI/CD pipeline that automatically builds, test, package, and deploy code whenever changes are pushed.
+
+
+Jenkins Typical workflow
+
+1. Developer pushes the code
+
+2.Jenkins pipeline starts
+
+checkout code from git
+build the application(maven/gradle/npm)
+Test (unit Testing)
+package (JAR/WAR/Docker image)
+publish artifact to registory (Docker Hub/ Nexus)
+Deploy to environment (Dev/staging/production) using the scripts or tools (kubectl, Ansible)
+Notify (Email/stack)
+pipeline ends and result displayed (success/fail)

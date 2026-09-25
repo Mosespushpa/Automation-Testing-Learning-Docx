@@ -1,0 +1,316 @@
+{
+  "info": {
+    "_postman_id": "a6210104-8212-410c-b6f8-744d67fe9783",
+    "name": "Train Booking 1",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52063021",
+    "_collection_link": "https://go.postman.co/collection/52063021-a6210104-8212-410c-b6f8-744d67fe9783?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "FindPassenger",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const responseData = pm.response.json();",
+              "",
+              "const passengerName = responseData.passengerName;",
+              "",
+              "pm.globals.set(\"PassengerName\", passengerName);",
+              "",
+              "pm.test(\"FindPassenger\", function () {",
+              "    pm.expect(passengerName).to.eql(\"Rakesh\");",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://webapps.tekstac.com/TrainAPI/PassengerService/viewPassengerByNameMobile/Rakesh/1234567890",
+          "protocol": "https",
+          "host": [
+            "webapps",
+            "tekstac",
+            "com"
+          ],
+          "path": [
+            "TrainAPI",
+            "PassengerService",
+            "viewPassengerByNameMobile",
+            "Rakesh",
+            "1234567890"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CheckPassengerCount",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const responseData = pm.response.json();",
+              "",
+              "const chennaiToCoimbatore = responseData.filter(booking => booking.departCity === \"Chennai\" && booking.arrivalCity === \"Coimbatore\");",
+              "",
+              "const passengerCount = chennaiToCoimbatore.length;",
+              "",
+              "pm.globals.set(\"InitialCount\", passengerCount);",
+              "",
+              "pm.test(\"CheckPassengerCount\", function () {",
+              "    pm.expect(passengerCount).to.eql(1);",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://webapps.tekstac.com/TrainAPI/BookingService/viewBookingList",
+          "protocol": "https",
+          "host": [
+            "webapps",
+            "tekstac",
+            "com"
+          ],
+          "path": [
+            "TrainAPI",
+            "BookingService",
+            "viewBookingList"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ReCheckPassengerCount",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const responseData = pm.response.json();",
+              "",
+              "const chennaiToCoimbatore = responseData.filter(booking => ",
+              "    booking.departCity === \"Chennai\" && booking.arrivalCity === \"Coimbatore\"",
+              ");",
+              "",
+              "const passengerCount = chennaiToCoimbatore.reduce((sum, booking) => sum + booking.passengerCount, 0);",
+              "",
+              "pm.globals.set(\"IntrimCount\", passengerCount);",
+              "",
+              "pm.test(\"ReCheckPassengerCount\", function () {",
+              "    pm.expect(passengerCount).to.eql(4);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "arrivalCity",
+              "value": "Coimbatore",
+              "type": "text",
+              "uuid": "cdbb8067-d026-47e4-9d19-27f634938966"
+            },
+            {
+              "key": "bookingDate",
+              "value": "25/11/2021",
+              "type": "text",
+              "uuid": "249d00c2-defd-4ca1-bce5-cac2f8c02f1b"
+            },
+            {
+              "key": "boogId",
+              "value": "1003",
+              "type": "text",
+              "uuid": "7a8d2603-ff04-44ac-86a4-9020d9a66add"
+            },
+            {
+              "key": "departCity",
+              "value": "Chennai",
+              "type": "text",
+              "uuid": "c59ce674-f700-4772-9182-66842d3cfd22"
+            },
+            {
+              "key": "passengerCount",
+              "value": "3",
+              "type": "text",
+              "uuid": "8fb3b63f-afb0-45d1-9359-303da5fa686e"
+            },
+            {
+              "key": "passengerName",
+              "value": "Amar, Akbarm Antony",
+              "type": "text",
+              "uuid": "d0c56cdc-f8c5-4a7a-98e1-cb410d152283"
+            },
+            {
+              "key": "ticketType",
+              "value": "GENERAL",
+              "type": "text",
+              "uuid": "c145caa2-77a3-4aab-9eef-e7e8d9b72130"
+            },
+            {
+              "key": "trainClass",
+              "value": "SLEEPER",
+              "type": "text",
+              "uuid": "b71f7d88-c2fe-49ae-81b4-3ef0586c76f9"
+            },
+            {
+              "key": "trainName",
+              "value": "ChennaiExpress",
+              "type": "text",
+              "uuid": "f1162b2c-9b2b-43e1-85c1-aa27446f21e8"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://webapps.tekstac.com/TrainAPI/BookingService/addBooking",
+          "protocol": "https",
+          "host": [
+            "webapps",
+            "tekstac",
+            "com"
+          ],
+          "path": [
+            "TrainAPI",
+            "BookingService",
+            "addBooking"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DeleteBooking",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const responseData = pm.response.json();",
+              "",
+              "const chennaiToCoimbatore = responseData.filter(booking => booking.departCity === \"Chennai\" && booking.arrivalCity === \"Coimbatore\");",
+              "",
+              "const finalCount = chennaiToCoimbatore.length;",
+              "",
+              "pm.globals.set(\"FinalCount\", finalCount);",
+              "",
+              "const initialCount = pm.globals.get(\"InitialCount\");",
+              "",
+              "pm.test(\"ValidatePassengerCount\", function () {",
+              "    pm.expect(Number(finalCount)).to.eql(Number(initialCount));",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://webapps.tekstac.com/TrainAPI/BookingService/deleteBookingById/1003",
+          "protocol": "https",
+          "host": [
+            "webapps",
+            "tekstac",
+            "com"
+          ],
+          "path": [
+            "TrainAPI",
+            "BookingService",
+            "deleteBookingById",
+            "1003"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "PassengerName",
+      "value": ""
+    }
+  ]
+}

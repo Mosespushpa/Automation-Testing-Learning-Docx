@@ -1,0 +1,101 @@
+1. Cluster & Context Information
+Commands to verify connectivity and view cluster nodes:
+
+Bash
+# View cluster information and master endpoints
+kubectl cluster-info
+
+# List all nodes in the cluster
+kubectl get nodes
+
+# Show current active cluster context/environment
+kubectl config current-context
+
+# Switch default namespace for future commands
+kubectl config set-context --current --namespace=<namespace_name>
+
+
+2. Viewing & Listing Resources (kubectl get)
+Used to check the status of active components. Add -n <namespace> to specify a namespace, or -A for all namespaces.
+
+Bash
+# List all pods in the current namespace
+kubectl get pods
+
+# List pods with extra details (node assignment, internal IP)
+kubectl get pods -o wide
+
+# List all deployments and services
+kubectl get deployments
+kubectl get services
+
+# List all resources in the current namespace
+kubectl get all
+
+# Real-time monitoring of pod state changes
+kubectl get pods -w
+
+
+3. Creating & Applying Resources
+Used to deploy workloads imperatively or declaratively using YAML manifests.
+
+Bash
+# Declarative: Create or update resources defined in a YAML file
+kubectl apply -f deployment.yaml
+
+# Imperative: Spin up a single pod directly
+kubectl run my-pod --image=nginx
+
+# Imperative: Create a deployment with a set image
+kubectl create deployment my-app --image=nginx:latest
+
+# Expose a deployment as a network service
+kubectl expose deployment my-app --port=80 --type=NodePort
+
+
+4. Troubleshooting & Inspection
+Commands used to diagnose failing pods, crashes, or networking issues.
+
+Bash
+# View detailed metadata, events, and failure reasons for a pod
+kubectl describe pod <pod_name>
+
+# View stdout/stderr logs from a running container
+kubectl logs <pod_name>
+
+# Stream live logs from a pod
+kubectl logs -f <pod_name>
+
+# Open an interactive terminal shell inside a running container
+kubectl exec -it <pod_name> -- /bin/sh
+
+
+5. Modifying & Scaling Workloads
+Commands to update running applications dynamically.
+
+Bash
+# Scale the number of replicas in a deployment
+kubectl scale deployment my-app --replicas=5
+
+# Restart all pods under a deployment sequentially (zero downtime)
+kubectl rollout restart deployment my-app
+
+# View the status of an ongoing rollout update
+kubectl rollout status deployment my-app
+
+# Roll back a deployment to its previous version
+kubectl rollout undo deployment my-app
+
+
+6. Deleting Resources
+Commands to remove resources from the cluster.
+
+Bash
+# Delete a specific pod
+kubectl delete pod <pod_name>
+
+# Delete resources defined in a manifest file
+kubectl delete -f deployment.yaml
+
+# Delete a deployment and all associated pods
+kubectl delete deployment my-app

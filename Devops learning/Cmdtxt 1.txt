@@ -1,0 +1,142 @@
+Docker
+
+sudo apt-get install docker.io
+
+vim Dockerfile
+
+docker build -t imageName
+
+docker run -d -p 8080:8080 imageName
+
+docker ps 
+
+docker kill hashCode
+
+docker rm containerName
+
+
+Git
+
+git -- version 
+
+git init
+
+git status
+
+git remote add origin link
+
+git pull origin master
+
+git push origin master
+
+git add file.txt
+
+git add -A
+
+git commit -m"message"
+
+git commit -a -m "message"
+
+git log
+
+git revert hashCode 
+
+git branch branchName
+
+git merge branchName
+
+git checkout branchName
+
+git clone sshUrl
+
+git fetch origin 
+
+git log branchName
+
+
+Linux
+
+whoami
+
+touch file.txt
+
+ls
+
+cd FolderName
+
+cd ..
+
+pwd
+
+mkdir folderName
+
+
+copy/move
+cd FolderName
+mv ../filename.txt .
+cp ../file.txt .
+
+clear
+
+nano filename.txt
+
+cat filename.txt
+
+echo "print"
+
+history
+
+ls -la
+
+rm filename.txt
+
+sudo useradd username
+
+sudo passwd username
+
+sudo userdel username
+
+ifconfig
+
+
+grep command
+
+grep "Word" file.txt
+
+grep -i "WoRd" file.txt
+
+grep -c "word" file.txt
+
+grep -l "word" *
+
+
+
+
+vim Dockerfile
+
+From Node: 18-alpine   (use small node.js image)
+WOKDIR /app      (set up a work directory name app)
+copy ..   (copy project static files)
+Run npm install -g serve (install a lightweight static server)
+EXPOSE 3000  (Expose the default port for the server)
+CMD ["serve" , "-s", ".", "-l", "3000"]  (Run server to serve HTML/CSS/js)
+
+
+
+
+pipeline{
+agent any
+stages{
+stage('Checkout'){
+steps{
+git branch:'main',url:'link'
+}
+}
+
+stage('Docker Build'){
+steps{
+sh 'docker build it myapp:latest .'
+}
+}
+}
+}

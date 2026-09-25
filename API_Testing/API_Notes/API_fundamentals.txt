@@ -1,0 +1,26 @@
+Authentication: It checks whether the user is valid person or not. It may be like(username, password, or OTP verification, or two step verification etc.)
+
+Authorization: Its talks about access to the data/page/site, Where as some organization sites, only authorized person access the page or the data.
+
+Token: In api testing we have to test sites regularly, each any every time we can not use the username and password to login to the page. so instead of username and password we use api token like header(we may call them api-token/ Barer token.)
+
+HTTP methods: 	GET Request  --> Only gets the data(response)
+		POST Request --> Create a new data(using request body)
+		PUT Request  --> To Edit the entire response
+		PATCH Request --> To Edit the partial response
+		DELETE Request --> To Delete the record
+
+HTTP status codes:	200 Success   -- 201 Created successfully
+			300 Redirected
+			400 Client error(Bad request) -- 401 Unauthorized -- 403 Forbidden 404 Not Found
+			500 Internal server error
+
+What is URL and URI: 	URI (Uniform Resource Identifier): The "umbrella" term. Anything that identifies a resource (name, location, or both) is a URI.
+
+			URL (Uniform Resource Locator): A type of URI that tells you how to get there (the location).
+
+			Example: > * https://google.com/about is both a URI and a URL.
+	
+			Think of it like this: A person's name is an identifier (URI), but their home address is a locator (URL).
+
+

@@ -1,0 +1,17 @@
+1. what is STLC?
+2. What is risk analysis that reuqired in requirement analysis?
+3. What is test cases and why it important in testing?
+4. Difference types of performance testing?
+5. What is the main goal of the RTM.
+6. What is the importance of Documentation
+7. Cause-effect Graphying
+8. ################******Severity and priority*************
+9. What is Deffer
+10. CD/CI in agile methodology.
+11. In V-model can we change the requirement inbetween
+12. Agile terminology.
+13. Big Bang and incremental
+14. Shift left testing
+	Error
+	Bug
+	Defect

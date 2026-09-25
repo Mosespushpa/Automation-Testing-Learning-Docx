@@ -1,0 +1,11 @@
+z1. Self Introduction
+2. Explain about my project
+3. also explain one of my scenario in my project detailly
+4. Api Methods (like get, put, post)
+5. asked me rate my java score for 5.
+6. POM technically not theoretical explaination
+7. asked about interested skill i have learned in my training
+8. also asked challenges i have faces during my project. 
+9. Asked what I have been doing since joining Cognizant. like when i have finished my taining, when i have came to Chennai, when i have auto allocated to charter.
+10. Asked where I am currently staying.
+11. Asked whether I am comfortable working extra hours when required by the project.

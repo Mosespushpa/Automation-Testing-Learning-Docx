@@ -1,0 +1,9 @@
+1. State name labels on map. no problem, just show the labels.
+
+2. Dynasties data — I'll map dynasties to approximate states. Should I include these major dynasties? Yes include all of them, show the dynasty name in the map with its capital and (time period of the dynasty), with this configure the timeline too. when the particular timeline is selected the dynasty should be highlighted.
+
+3.Historical Events pin locations, yes include everything, if any thing miss i will add later.
+
+4.Image upload later — So for now I'll add a placeholder image slot with a "Upload Image" style placeholder box in the panel, and the slider UI will be ready for when images are added. Correct? yaa, keep the logic for it.
+
+5.Timeline auto-switch — When year 1947 is clicked, it auto-switches to "Historical Events" category.

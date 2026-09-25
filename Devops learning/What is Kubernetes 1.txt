@@ -1,0 +1,101 @@
+Kubernetes
+
+What is Kubernetes
+
+Kubernetes (often abbreviated as K8s) is an open-source container orchestration platform designed to automate the deployment, scaling, and management of containerized applications.
+
+Key Features
+
+Container Orchestration: Manages containers (like Docker) across multiple machines.
+
+Scaling: Automatically scales applications up or down based on demand.
+
+Self-Healing: Restarts failed containers, replaces nodes, and reschedules workloads.
+
+Load Balancing: Distributes traffic across containers.
+
+Rolling Updates: Updates applications without downtime.
+
+
+Core Components
+
+kube-apiserver: The central API for the cluster.
+
+kubelet: Runs on each node to ensure containers are healthy.
+
+kube-proxy: Handles networking and routing.
+
+Controller Manager & Scheduler: Manage cluster state and schedule workloads.
+
+In short, Kubernetes helps you run applications reliably at scale in a distributed environment.
+
+
+Why Kubernetes ?
+
+“Kubernetes is widely used because it solves the challenges of running containerized applications at scale. It provides automated deployment, scaling, and management of containers across clusters of machines. Key benefits include:
+
+High Availability & Self-Healing: It automatically restarts failed containers and reschedules workloads.
+Scalability: Supports horizontal scaling based on resource usage or custom metrics.
+Portability: Works across on-premises and multiple cloud providers, enabling hybrid and multi-cloud strategies.
+Declarative Configuration: You define the desired state, and Kubernetes ensures the system matches it.
+Rich Ecosystem: Integrates with tools like Helm, Istio, and Prometheus for advanced capabilities.
+
+In short, Kubernetes helps organizations achieve reliability, scalability, and flexibility for modern cloud-native applications.”
+
+
+Kubernetes Architecture
+
+Here’s a one-line summary you can use in interviews:
+“Kubernetes uses a master-worker architecture where the control plane manages cluster state and scheduling, while worker nodes run containerized workloads inside Pods.”
+
+
+“Kubernetes uses a master-worker architecture to manage containerized applications at scale. The architecture has two main parts:
+
+1. Control Plane (Master Node)
+
+kube-apiserver: The central API that all components and clients interact with.
+etcd: A distributed key-value store that holds the cluster state.
+kube-scheduler: Decides which node will run a new Pod based on resource availability.
+Controller Manager: Runs controllers that maintain the desired state of the cluster.
+
+2. Worker Nodes
+
+kubelet: Ensures containers are running as per Pod specifications.
+kube-proxy: Handles networking and service discovery.
+Container Runtime: Executes containers (e.g., Docker, containerd).
+
+Applications run inside Pods, which are the smallest deployable units. The control plane manages cluster state, while worker nodes run workloads. This design provides scalability, high availability, and self-healing for modern cloud-native applications.”
+
+
+
+
+
+
+
+Node and Pod
+
+Node
+
+A Node is a physical or virtual machine in a Kubernetes cluster.
+It runs workloads and contains:
+
+kubelet (to manage Pods)
+kube-proxy (for networking)
+Container Runtime (like Docker or containerd)
+
+
+Nodes can be worker nodes or control plane nodes.
+
+Pod
+
+A Pod is the smallest deployable unit in Kubernetes.
+It represents one or more containers that share:
+
+Network namespace (same IP)
+Storage volumes
+
+
+Pods are ephemeral; Kubernetes can recreate them if they fail.
+
+Relationship:
+Pods run inside Nodes. A Node can host multiple Pods, and Kubernetes schedules Pods onto Nodes based on resource availability.

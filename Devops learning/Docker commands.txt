@@ -1,0 +1,64 @@
+🛠️ 1. Image Management
+Commands used to download, build, and manage Docker images.
+
+docker pull <image>: Download an image from Docker Hub (e.g., docker pull ubuntu:latest).
+
+docker push <image>: Upload an image to a registry.
+
+docker images: List all locally stored Docker images.
+
+docker rmi <image_id>: Delete a local image.
+
+docker build -t <tag_name> .: Build an image from a Dockerfile in the current directory.
+
+🚀 2. Container Lifecycle
+Commands used to create, start, stop, and manage containers.
+
+docker run <image>: Create and start a container from an image.
+
+docker run -d -p <host_port>:<container_port> <image>: Run a container in the background (detached mode) and map ports.
+
+docker run -it <image> bash: Run an interactive container with a terminal shell.
+
+docker start <container_id>: Start an existing, stopped container.
+
+docker stop <container_id>: Gracefully stop a running container.
+
+docker restart <container_id>: Restart a container.
+
+docker rm <container_id>: Delete a stopped container (add -f to force-delete a running one).
+
+📊 3. Monitoring & Troubleshooting
+Commands used to check the status and logs of containers.
+
+docker ps: List currently running containers.
+
+docker ps -a: List all containers (running and stopped).
+
+docker logs <container_id>: View the logs of a specific container (add -f to follow log output in real time).
+
+docker exec -it <container_id> bash: Open an interactive shell inside a currently running container.
+
+docker inspect <container_id>: View detailed low-level configuration info about a container or image.
+
+docker stats: Display a live stream of resource usage statistics (CPU, memory, network).
+
+🌐 4. Network & Storage
+Commands for managing Docker networks and volumes.
+
+docker network ls: List all Docker networks.
+
+docker network create <network_name>: Create a custom user-defined network.
+
+docker volume ls: List all Docker volumes.
+
+docker volume create <volume_name>: Create a persistent storage volume.
+
+🧹 5. System Cleanup
+Commands to free up disk space by removing unused data.
+
+docker system prune: Remove all stopped containers, unused networks, and dangling images.
+
+docker system prune -a: Remove all unused images (not just dangling ones) along with stopped containers.
+
+docker volume prune: Remove all unused local volumes.

@@ -1,0 +1,170 @@
+MicroServices
+
+What are Microservices?
+
+Microservices are an architectural approach to developing software applications as a collection of small, independent services that communicate with each other over a network.
+
+Instead of building a monolithic application where all the functionality is tightly integrated into a single codebase, microservices break down the application into smaller, loosely coupled services.
+
+Can be written in a variety of programming languages, and frameworks, and each service acts as a mini-application on its own.
+
+A small, loosely coupled service that is designed to perform a specific business function and each microservice can be developed, deployed, and scaled independently.
+
+
+How do Microservices work?
+
+Each microservice handles a particular business feature, like user authentication or product management, allowing for specialized development.
+
+Services interact via APIs, facilitating standardized information exchange and integration.
+
+Different technologies can be used for each service, enabling teams to select the best tools for their needs.
+
+Microservices can be updated independently, reducing risks during changes and enhancing system resilience.
+
+✅ Microservices Architecture Components
+
+
+Client
+
+Sends requests to the system (Web, Mobile, API consumers).
+
+
+
+API Gateway
+
+Acts as a single entry point for all client requests.
+Handles routing, authentication, rate limiting, and response aggregation.
+
+
+
+Microservices
+
+Independent services, each responsible for a specific business capability.
+Communicate via REST/gRPC or message queues.
+
+
+
+Service Discovery
+
+Dynamically locates services without hardcoding IPs.
+Tools: Eureka, Consul, Kubernetes DNS.
+
+
+
+Database per Service
+
+Each microservice has its own database to maintain loose coupling.
+Can be SQL or NoSQL depending on service needs.
+
+
+
+Message Broker
+
+Enables asynchronous communication between services.
+Examples: Kafka, RabbitMQ.
+
+
+
+Centralized Configuration
+
+Stores configs for all services in one place.
+Tools: Spring Cloud Config, Consul.
+
+
+
+Monitoring & Logging
+
+Distributed tracing (Jaeger, Zipkin), centralized logging (ELK), metrics (Prometheus).
+
+
+
+Containerization & Orchestration
+
+Docker for packaging services.
+Kubernetes for deployment, scaling, and service discovery.
+
+
+
+
+1. What are Microservices?
+Answer:
+Microservices is an architectural style where an application is structured as a collection of small, loosely coupled, independently deployable services. Each service focuses on a specific business capability and communicates with others via lightweight protocols like HTTP or messaging queues.
+
+✅ 2. How is Microservices different from Monolithic architecture?
+Answer:
+
+Monolithic: Single codebase, tightly coupled, hard to scale and maintain.
+Microservices: Multiple independent services, easier to scale, deploy, and maintain, but adds complexity in communication and monitoring.
+
+
+✅ 3. What are the benefits of Microservices?
+Answer:
+
+Independent deployment
+Scalability
+Fault isolation
+Technology diversity (different services can use different tech stacks)
+
+
+✅ 4. What are the challenges of Microservices?
+Answer:
+
+Increased complexity in communication
+Distributed data management
+Monitoring and debugging across services
+Network latency and security concerns
+
+
+✅ 5. How do Microservices communicate?
+Answer:
+
+Synchronous: REST API, gRPC
+Asynchronous: Message brokers like Kafka, RabbitMQ
+
+
+✅ 6. How do you handle transactions across multiple Microservices?
+Answer:
+
+Use Saga Pattern for distributed transactions
+Implement event-driven architecture
+Avoid two-phase commit (due to complexity and performance issues)
+
+
+✅ 7. What is an API Gateway and why is it needed?
+Answer:
+An API Gateway acts as a single entry point for all client requests. It handles routing, load balancing, authentication, rate limiting, and sometimes response aggregation. Examples: Kong, Zuul, NGINX.
+
+✅ 8.c?
+Answer:
+
+Use Centralized Configuration Management tools like Spring Cloud Config or Consul
+Store configs in Git or a secure vault
+Refresh configs dynamically without restarting services
+
+
+✅ 9. How do you ensure security in Microservices?
+Answer:
+
+Use OAuth 2.0 / JWT for authentication
+Secure communication with HTTPS/TLS
+Implement service-to-service authentication (mTLS)
+
+
+✅ 10. How do you monitor Microservices?
+Answer:
+
+Use Distributed Tracing (Jaeger, Zipkin)
+Centralized logging (ELK stack)
+Metrics and alerts (Prometheus, Grafana)
+
+
+✅ 11. What is Service Discovery?
+Answer:
+Service Discovery helps services find each other dynamically without hardcoding IPs. Tools: Eureka, Consul, Kubernetes DNS.
+
+✅ 12. How do you deploy Microservices?
+Answer:
+
+Containerization with Docker
+Orchestration with Kubernetes
+CI/CD pipelines for automated deployment

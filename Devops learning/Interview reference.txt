@@ -1,0 +1,3 @@
+cv,
+tools/skill/project -> cv
+background skill

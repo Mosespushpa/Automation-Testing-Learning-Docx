@@ -1,0 +1,95 @@
+LINUX
+
+Linux is a free, open-source operating system used to run servers, cloud platforms, containers, mobile devices, and even supercomputers. It's known for its stability, security, flexibility, and performance.
+
+Why Linux is Essential in DevOps
+
+Linux is widely used in DevOps because most tools like Docker, Kubernetes, Ansible, Terraform, and Jenkins are optimized for Linux environments. Cloud platforms such as AWS, Azure, and Google Cloud predominantly run Linux-based servers. DevOps engineers rely on Linux for tasks like managing files, configuring networks, monitoring processes, and automating deployments. Mastering Linux commands and concepts is crucial for efficiently handling these responsibilities.
+
+Key Linux Commands for DevOps
+
+Linux commands are vital for managing systems and automating tasks. Here are some commonly used commands:
+
+File and Directory Management: Commands like ls, cd, mkdir, cp, and rm help navigate and manipulate files and directories.
+
+System Monitoring: Tools like top, ps, and free provide insights into system performance and resource usage.
+
+Networking: Commands such as ping, ifconfig, and netstat are used to configure and troubleshoot network connections.
+
+Process Management: Commands like kill and pidof allow engineers to manage running processes.
+
+File Permissions: Using chmod and chown, you can control access to files and directories
+
+Commands
+
+whoami (to check the user name)
+
+touch file_name.txt (create file)
+
+ls (list out the files in the directory)
+
+pwd (to check in which directory you are currently on)
+
+mkdir Folder_name (to create the folder/directory)
+
+cd Folder_name (to change directory to go inside the Folder_name)
+
+cd.. (to go to the previous directory by on step)
+
+commands to move the file from the previous directory to the current directory
+
+cd Folder_name  (current directory)
+mv ../file_name.txt .  (first is source and second is destination which is . for current directory)
+cp ../file_name.txt . (to copy)
+
+clear (to clear the terminal)
+
+nano file_name.txt (To write in this file)
+
+cat file_name.txt (to see whats written inside the file)
+
+echo "Hello world" (to print Hello world)
+
+history (to list all the command that you have used)
+
+ls -la (to list the file along with its details)
+
+rm file_name.txt (to delete the file)
+
+ls -ld (display permissions of a directory)
+
+sudo useradd <username> (creates a new user)
+
+sudo passwd <username> (sets a password for the user)
+
+sudo userdel <username> (delete the user)
+
+ifconfig (Display network interface configuration)
+
+
+
+grep command in Unix/Linux
+
+The grep command is one of the most useful tools in Linux and Unix systems. It is used to search for specific words, phrases, or patterns inside text files, and shows the matching lines on your screen.
+
+grep Command is useful when you need to quickly find certain keywords or phrases in logs or documents. Let’s consider an example:
+
+Search for a word in a file
+If you have a file called notes.txt and you want to find all lines containing the word Python, you can use:
+
+grep "python" notes.txt
+
+grep [options] pattern [files]
+
+1. Case insensitive search
+grep -i "UNix" geekfile.txt (case insensitive)
+
+2. Displaying the Count Matches Using grep
+We can find the number of lines that matches the given string/pattern 
+
+grep -c "unix" geekfile.txt
+
+3. Display the Matching Filenames Using grep
+We can just display the files that contains the given string/pattern. 
+
+grep -l "unix" *
